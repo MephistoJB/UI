@@ -375,7 +375,10 @@ card_esh_room:
                   }
                 ]]]
         tap_action:
-          action: "none"
+          action: call-service
+          service: cover.toggle
+          service_data:
+            entity_id: "[[[ return variables.ulm_custom_card_esh_room_cover_entity ]]]"
         template:
           - "widget_icon"
           - "ulm_actions_card"
